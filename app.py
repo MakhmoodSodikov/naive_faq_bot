@@ -26,3 +26,6 @@ def hello_world():
         return jsonify(output)
     except:
         return redirect(url_for('bad_request'))
+
+if __name__ == "__main__":
+    app.run()
