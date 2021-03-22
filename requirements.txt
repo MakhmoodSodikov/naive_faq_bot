@@ -1,3 +1,4 @@
 deeppavlov
 gevent
 flask
+spacy==2.2.3
