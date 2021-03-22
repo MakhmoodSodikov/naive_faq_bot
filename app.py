@@ -2,9 +2,6 @@ from flask import Flask, request, jsonify, abort, redirect, url_for, flash
 from model import load, infer
 
 
-app = Flask(__name__)
-
-
 @app.route('/')
 def check_is_running():
     return 'Application is running'
@@ -28,4 +25,5 @@ def hello_world():
         return redirect(url_for('bad_request'))
 
 if __name__ == "__main__":
+    app = Flask(__name__)
     app.run()
