@@ -22,7 +22,10 @@ def hello_world():
         content = request.get_json()
         query = content['query']
         # TODO try-except blocks to check that everything is correct
-        output = infer(model, query)
+        output = {'answer': infer(model, query)}
         return jsonify(output)
     except:
         return redirect(url_for('bad_request'))
+
+if __name__ == "__main__":
+    app.run()
