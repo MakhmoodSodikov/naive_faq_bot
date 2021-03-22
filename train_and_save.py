@@ -17,3 +17,6 @@ def train(data='wiki_train.csv', save_path='model_config.json'):
 def save(model_config, save_path):
     with open(save_path, 'w') as outfile:
         json.dump(model_config, outfile)
+        
+if __name__ == "__main__":
+    train()
