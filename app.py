@@ -24,4 +24,4 @@ def hello_world():
     return jsonify(output)
 
 
-app.run(host='0.0.0.0')
+app.run(host='0.0.0.0', host=5001)
