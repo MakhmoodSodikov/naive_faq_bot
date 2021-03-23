@@ -14,15 +14,14 @@ def bad_request():
 
 @app.route('/model/test_api_external', methods=['POST'])
 def hello_world():
+    print('request received')
     model = load()
-    try:
-        content = request.get_json()
-        query = content['query']
-        # TODO try-except blocks to check that everything is correct
-        output = {'answer': infer(model, query)}
-        return jsonify(output)
-    except:
-        return redirect(url_for('bad_request'))
+    content = request.get_json()
+    query = content['query']
+    # TODO try-except blocks to check that everything is correct
+    print('returning ans')
+    output = {'answer': infer(model, query)}
+    return jsonify(output)
 
 
 app.run(host='0.0.0.0')
