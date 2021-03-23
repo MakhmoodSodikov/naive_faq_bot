@@ -1,6 +1,8 @@
 # naive_faq_bot
 
 Data - WikiQA dataset
+
+
 Model - RNN seq2vec by deeppavlov
 
 
