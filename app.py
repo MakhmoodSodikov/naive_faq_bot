@@ -25,4 +25,4 @@ def hello_world():
         return redirect(url_for('bad_request'))
 
 
-app.run()
+app.run(host='0.0.0.0')
